@@ -1,0 +1,26 @@
+int indexDeletion(int* arr, int size, int index){
+    if (size < 1){
+        return -1;
+    }
+    for (int i = index; i <size-1; i++){
+        arr[i]=arr[i+1];
+    }
+    return 1;
+}
+
+int removeDuplicates(int* nums, int numsSize) {
+    for(int i = 0 ; i<=numsSize-1 ; i++){
+    
+        for(int j = i+1 ; j<=numsSize-1 ; j++){
+            
+            if(nums[i]==nums[j]){
+                indexDeletion(nums, numsSize, j);
+                numsSize = numsSize - 1; 
+                j = j - 1;
+            }
+        }
+        
+    }
+    int k = sizeof(nums)/4;
+    return numsSize;
+}
