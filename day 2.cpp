@@ -1,4 +1,4 @@
-1. Palindrome Linked List
+// 1. Palindrome Linked List
 
 bool isPalindrome(ListNode* head) {
         if(head==NULL || head->next == NULL){
@@ -32,7 +32,7 @@ bool isPalindrome(ListNode* head) {
     }
 
 
-2. Remove Duplicates from Sorted List II
+//2. Remove Duplicates from Sorted List II
 ListNode* deleteDuplicates(ListNode* head) {
         struct ListNode* temp2 = head;
         struct ListNode* dummy = new ListNode(0,head);
